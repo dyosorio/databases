@@ -1,9 +1,6 @@
 /*
 Exercise 3: Joins
-
-Write a query that prints names of all Authors and their corresponding Collaborators.
-
-Write a query that prints all columns of Authors and their published paper_title. If there is an author without any Research_Papers, print the information of that Author too.
+Updated
 */
 
 const mysql = require('mysql');

@@ -1,5 +1,6 @@
 /*
 Exercise 4: Aggregate Functions
+Updated
 */
 
 const mysql = require('mysql');

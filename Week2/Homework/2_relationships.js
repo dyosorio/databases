@@ -1,9 +1,6 @@
 /*
 Exercise 2: Relationships
-
-Create another table, called Research_Papers
-
-(insert rows) of 15 authors and 30 research papers
+Finished reviewing 
 */
 
 const mysql = require('mysql');
