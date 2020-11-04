@@ -1,0 +1,28 @@
+1. Create MongoDB Atlas account
+
+2. Create cluster
+
+3. Create User
+
+4. IP Whitelist - add current IP or allow access from anywhere (this was my option for the homework)
+
+5. open mysql terminal and type the commands to migrate the tables into Atlas MongoDB
+
+6. Got error and fixed it 
+ERROR 1290 (HY000): The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
+Fix it by adding the following line to my.cnf file:
+secure_file_priv    = ''
+
+7. Import Database to CSV
+select * into outfile 'city.csv' FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' from city;
+select * into outfile 'country.csv' FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' from country;
+select * into outfile 'countrylanguage.csv' FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' from countrylanguage;
+
+8. Add new row into the CSV files. Add column names in the first line of each file.
+
+9. create collection in MongoDB Compass. Double check the datatypes and import data.
+
+10. Go to the browser, to the Atlas MongoDB account, refresh and under Collections I found my database world and documents city, country and countrylanguage
+
+The end.
+
