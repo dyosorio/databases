@@ -32,6 +32,12 @@ How can you develop the set of 2NF tables? (Think of relationships between diffe
             Table Where: venue_code(PK), venue_description
             Table What: food_code(PK), food_description
         It is necessary to have more than one table because in order for the tables to be 2NF, all attributes within the entity should depend solely on the unique identifier of the entity. 
+
+    ***Comment: Ok that's good, you also need to link them all together then.***
+    *** Relation between tables ****
+            Who - when  > member-dinner: member_id(FK) - dinner_id(FK)
+            When- where > dinner-venue: dinner_id(FK) - venue_code(FK)
+            Who - what  > member-food: member_id(FK) - food_code(FK)
     
 How can you develop the set of 3NF tables?
     After the tables are considered already in 1NF and 2NF. We must make sure that the values in each table depends on the primary key for their respective table only. 

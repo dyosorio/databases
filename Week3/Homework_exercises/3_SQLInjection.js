@@ -25,10 +25,12 @@ An example of values that could harm the database are the ones based on 1=1 is A
 */
 
 //Rewrite the function so that it is no longer vulnerable to SQL injection
+//Comment: How can you escape the table name ?
+//Answer: with ? 
 function getPopulation(Country, name, code, cb) {
     // assuming that connection to the database is established and stored as conn
     conn.query(
-      `SELECT Population FROM ${Country} WHERE Name = ? and code = ?`,
+      `SELECT Population FROM ? WHERE Name = ? and code = ?`,
       function(err, result) {
         if (err) cb(err);
         if (result.length == 0) cb(new Error("Not found"));
